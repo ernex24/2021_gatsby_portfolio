@@ -51,9 +51,17 @@ table {
 }
 
 a:link a:active, a:visited {
+  font-weight: 300;
   color: #fff;
   text-decoration: none;
+  transition: 2s;
 }
+
+a:hover{
+  font-weight: 700;
+  transition: 300ms;
+}
+
 
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
@@ -99,10 +107,17 @@ margin-left: 40px;
 .nav{
   height: auto;
   display: flex;
-  justify-content: end;
+  justify-content: space-between;
   align-items: flex-end;
   font-weight: 300;
   margin-right: 30px;
+  width: 30%;
+  min-width: 500px;
+}
+
+.navactive{
+  transition: 100ms;
+  font-weight: 700;
 }
 
 .nav li{
