@@ -214,11 +214,6 @@ z-index: -1;
   font-variant-numeric: lining-nums;
 }
 
-.imageactive{
-  opacity: 1;
-  transition: 2s;
-}
-
 .phone{
   position: absolute;
   right: 14%;
@@ -242,3 +237,77 @@ z-index: -1;
   right: 10%;
   top: 20%;
 }
+
+/* TABLET LANDSCAPE / DESKTOP */
+@media only screen and (max-width: 1024px) {
+
+  .laptop{
+    position: absolute;
+    top: 25%;
+    width: auto;
+    height: 38%;
+    right: 0;
+  }
+
+  .imac {
+    position: absolute;
+    right: 8%;
+    top: 25%;
+    width: auto;
+    height: 43%;
+  }
+
+  .phone{
+    position: absolute;
+    right: 14%;
+    top: 15%;
+    width: auto;
+    height: 73%;
+  }
+
+} 
+
+/* TABLETS PORTRAIT */
+@media only screen and (max-width: 768px) {
+
+  .laptop{
+    position: absolute;
+    top: 25%;
+    width: auto;
+    height: 20%;
+    right: 0;
+  }
+
+  .imac {
+    position: absolute;
+    right: 8%;
+    top: 10%;
+    width: auto;
+    height: 30%;
+  }
+
+  .phone{
+    position: absolute;
+    right: 10%;
+    top: 15%;
+    width: auto;
+    height: 50%;
+  }
+
+}
+
+/* SMARTPHONES LANDSCAPE */
+@media only screen and (min-width: 480px) {
+
+
+}
+
+/* SMARTPHONES PORTRAIT */
+@media only screen and (min-width: 300px) {
+
+
+}
+
+
+
+
