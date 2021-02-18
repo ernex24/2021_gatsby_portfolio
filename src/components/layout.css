@@ -24,6 +24,7 @@ time, mark, audio, video {
 	font: inherit;
 	vertical-align: baseline;
   text-decoration: none;
+  list-style-type: none;
 }
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, 
@@ -213,19 +214,30 @@ z-index: -1;
   font-variant-numeric: lining-nums;
 }
 
-.iphone{
+.imageactive{
+  opacity: 1;
+  transition: 2s;
+}
+
+.phone{
   position: absolute;
-  right: 10%;
+  right: 14%;
   top: 15%;
 }
 
 .laptop{
   position: absolute;
-  right: 4%;
   top: 25%;
+  right: 4%;
 }
 
-.ipad{
+.tablet{
+  position: absolute;
+  right: 12%;
+  top: 20%;
+}
+
+.imac{
   position: absolute;
   right: 10%;
   top: 20%;

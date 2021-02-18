@@ -9,7 +9,6 @@ const moveTo = (section) => {
   // console.log(window.fullpage_api)
 }
 
-
 const Header = (props) => (
   <header className="header">
     <li><a href="#home" activeClassName="navactive" onClick={() => moveTo(1)} ><img src={logo}></img></a></li>

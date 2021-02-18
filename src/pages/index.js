@@ -12,9 +12,10 @@ import '../../node_modules/pattern.css/dist/pattern.css'
 
 import logo from '../images/ernesto_perez_logo.svg';
 import uiux from '../images/uiux.svg';
-import iphone from '../images/IphoneX.svg';
-import laptop from '../images/laptop.svg';
-import ipad from '../images/iPad.svg'; 
+import phone from '../images/iPhone.png';
+import laptop from '../images/Macbook.png';
+import tablet from '../images/Ipad.png'; 
+import imac from '../images/iMac.png'; 
 import niceBackground from '../images/niceBackground.svg';
 
 
@@ -42,10 +43,34 @@ const IndexPage = () => {
       render={({ state, fullpageApi }) => {
         return (
             <div>
-            <MySection title={"Hi I'm Ernesto"} description={"A system-minded Senior Product Designer with visual design, development, and business background."} screen={iphone} class={"iphone"} />
-            <MySection title={"Design system"} description={"A system-minded Senior Product Designer with visual design, development, and business background."} screen={laptop} class={"laptop"}  />
-            <MySection title={"Web app"} description={"A system-minded Senior Product Designer with visual design, development, and business background."} screen={ipad} class={"ipad"}  />
-            <MySection title={"Mobile app"} description={"A system-minded Senior Product Designer with visual design, development, and business background."} screen={iphone} class={"iphone"}  />
+            <MySection 
+              title={"Hi I'm Ernesto"} 
+              description={"A system-minded Senior Product Designer with visual design, development, and business background."} 
+              screen={phone} 
+              class={"phone"} 
+              pageactive={origin} 
+              pageloaded={destination}/>
+            <MySection 
+              title={"Design system"} 
+              description={"A system-minded Senior Product Designer with visual design, development, and business background."} 
+              screen={laptop} 
+              class={"laptop"} 
+              pageactive={origin} 
+              pageloaded={destination}/>
+            <MySection 
+              title={"Web app"} 
+              description={"A system-minded Senior Product Designer with visual design, development, and business background."} 
+              screen={imac} 
+              class={"imac"} 
+              pageactive={origin} 
+              pageloaded={destination}/>
+            <MySection 
+              title={"Mobile app"} 
+              description={"A system-minded Senior Product Designer with visual design, development, and business background."} 
+              screen={phone} 
+              class={"phone"} 
+              pageactive={origin} 
+              pageloaded={destination}/>
             </div>
         );
       }}
