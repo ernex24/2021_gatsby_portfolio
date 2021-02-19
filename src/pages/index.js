@@ -1,14 +1,14 @@
 import React, { useState } from 'react';
-import { Link } from "gatsby"
+import { Link } from "gatsby";
 
-import Layout from "../components/layout"
-import Image from "../components/image"
-import SEO from "../components/seo"
-import Header from "../components/header"
-import MySection from "../components/section"
+import Layout from "../components/layout";
+import Image from "../components/image";
+import SEO from "../components/seo";
+import Header from "../components/header";
+import MySection from "../components/section";
 
 import ReactFullpage from '@fullpage/react-fullpage';
-import '../../node_modules/pattern.css/dist/pattern.css'
+import '../../node_modules/pattern.css/dist/pattern.css';
 
 import logo from '../images/ernesto_perez_logo.svg';
 import uiux from '../images/uiux.svg';
@@ -45,7 +45,9 @@ const IndexPage = () => {
             <div>
             <MySection 
               title={"Hi I'm Ernesto"} 
-              description={"A system-minded Senior Product Designer with visual design, development, and business background."} 
+              description={"A system-minded Senior Product Designer with visual design, development, and business background."}
+              cta={"Download my cv"} 
+              link={"/page-2"} 
               screen={phone} 
               class={"phone"} 
               pageactive={origin} 
@@ -53,6 +55,8 @@ const IndexPage = () => {
             <MySection 
               title={"Design system"} 
               description={"A system-minded Senior Product Designer with visual design, development, and business background."} 
+              cta={"See the project"} 
+              link={"/page-2"} 
               screen={laptop} 
               class={"laptop"} 
               pageactive={origin} 
@@ -60,6 +64,8 @@ const IndexPage = () => {
             <MySection 
               title={"Web app"} 
               description={"A system-minded Senior Product Designer with visual design, development, and business background."} 
+              cta={"See the project"} 
+              link={"/page-2"} 
               screen={imac} 
               class={"imac"} 
               pageactive={origin} 
@@ -67,6 +73,8 @@ const IndexPage = () => {
             <MySection 
               title={"Mobile app"} 
               description={"A system-minded Senior Product Designer with visual design, development, and business background."} 
+              cta={"See the project"} 
+              link={"/page-2"} 
               screen={phone} 
               class={"phone"} 
               pageactive={origin} 
