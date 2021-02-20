@@ -7,7 +7,7 @@ function MySection(props){
   const [show, setShow] = useState(false);
   const origin = props.pageactive;
   const destination =  props.pageloaded;
-  console.log("origin " + origin + " destination " + destination);
+  // console.log("origin " + origin + " destination " + destination);
 
   useEffect(() => {
     origin === destination ? setShow(true) : setShow(false);
@@ -16,12 +16,12 @@ function MySection(props){
   return (
     <div className="section">
       <div className="mainText">
+        <h2>{props.subtitle}</h2>
         <h1>{props.title}</h1>
         <h3>{props.description}</h3>
         <Link to={props.link}>
         <button className="cta">{props.cta}</button>
         </Link>
-        <div className="redDots pattern-dots-md"></div>
       </div>
       <Bounce right when={show}>
       <img className={props.class} src={props.screen}></img>

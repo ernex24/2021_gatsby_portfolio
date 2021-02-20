@@ -10,24 +10,29 @@ import MySection from "../components/section";
 import ReactFullpage from '@fullpage/react-fullpage';
 import '../../node_modules/pattern.css/dist/pattern.css';
 
-import logo from '../images/ernesto_perez_logo.svg';
-import uiux from '../images/uiux.svg';
 import phone from '../images/iPhone.png';
 import laptop from '../images/Macbook.png';
-import tablet from '../images/Ipad.png'; 
-import imac from '../images/iMac.png'; 
+import arrowDown from '../images/arrow_down.svg';
+import arrowUp from '../images/arrow_up.svg';
 import niceBackground from '../images/niceBackground.svg';
+
+const moveDown = () => {
+  // console.log(window.fullpage_api)
+  window.fullpage_api.moveSectionDown();
+}
+
+const moveUp = () => {
+  window.fullpage_api.moveSectionUp();
+}
 
 
 const IndexPage = () => { 
-  
   const [origin, setOrigin] = useState(0);
   const [destination, setDestination] = useState(0);
   const onLeave = (origin, destination, direction) => setOrigin(destination.index);
   const afterLoad = (origin, destination, direction) => setDestination(destination.index);
   const anchors = ["home", "designSystem", "webApp", "mobileApp", "contact"];
 
-   console.log(origin)
 
   return(
     <>
@@ -44,7 +49,8 @@ const IndexPage = () => {
         return (
             <div>
             <MySection 
-              title={"Hi I'm Ernesto"} 
+              title={"Hi I'm Ernesto"}
+              subtitle={"Senior UI UX Engineer"} 
               description={"A system-minded Senior Product Designer with visual design, development, and business background."}
               cta={"Download my cv"} 
               link={"/page-2"} 
@@ -53,7 +59,8 @@ const IndexPage = () => {
               pageactive={origin} 
               pageloaded={destination}/>
             <MySection 
-              title={"Design system"} 
+              title={"Design system"}
+              subtitle={"Project"} 
               description={"A system-minded Senior Product Designer with visual design, development, and business background."} 
               cta={"See the project"} 
               link={"/page-2"} 
@@ -63,15 +70,17 @@ const IndexPage = () => {
               pageloaded={destination}/>
             <MySection 
               title={"Web app"} 
+              subtitle={"Project"} 
               description={"A system-minded Senior Product Designer with visual design, development, and business background."} 
               cta={"See the project"} 
               link={"/page-2"} 
-              screen={imac} 
-              class={"imac"} 
+              screen={laptop} 
+              class={"laptop"} 
               pageactive={origin} 
               pageloaded={destination}/>
             <MySection 
-              title={"Mobile app"} 
+              title={"Mobile app"}
+              subtitle={"Project"} 
               description={"A system-minded Senior Product Designer with visual design, development, and business background."} 
               cta={"See the project"} 
               link={"/page-2"} 
@@ -85,10 +94,9 @@ const IndexPage = () => {
     />
     <div>
       <div className="pageNumber">{'0'+(origin+1)}</div>
-      <div className="whiteDots pattern-diagonal-lines-sm"></div>
       <img className="niceBackground" src={niceBackground}></img>
-      <img src={uiux} className="fixedText"></img>
-      <div className="backPatterns pattern-vertical-lines-xl"></div>
+      <img onClick={() => moveDown()} className={ origin === 3 ? " hide" : " arrowDown"} src={arrowDown}></img>
+      <img onClick={() => moveUp()} className={ origin === 0 ? " hide" : " arrowUp"  } src={arrowUp}></img>
     </div>
   </>
     )
