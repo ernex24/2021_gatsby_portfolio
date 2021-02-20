@@ -34,16 +34,16 @@ const Header = (props) => (
              className={ props.pageactive === 3 ? "navactive" : " "  } 
              onClick={() => moveTo(4)} >Mobile app</a></li>
 
-      <li><a href="#contact" 
+      <li><a href="mailto:ernex24@gmail.com" 
              className={ props.pageactive === 4 ? "navactive" : " "  } 
-             onClick={() => moveTo(1)} >Contact</a></li>
+             >Contact</a></li>
 
     </ul>
     </div>
     <ul className="socialnav">
-      <li><img src={linkedin}></img></li>
-      <li><img src={dribbble}></img></li>
-      <li><img src={instagram}></img></li>
+      <li><a href="https://www.linkedin.com/ernesto1984" target="_blank"><img src={linkedin}></img></a></li>
+      <li><a href="https://dribbble.com/ernex1984" target="_blank"><img src={dribbble}></img></a></li>
+      <li><a href="https://www.instagram.com/ernex_ux_ui" target="_blank"><img src={instagram}></img></a></li>
     </ul>
   </header>
 )

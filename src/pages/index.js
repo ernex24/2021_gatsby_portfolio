@@ -53,7 +53,7 @@ const IndexPage = () => {
               subtitle={"Senior UI UX Engineer"} 
               description={"A system-minded Senior Product Designer with visual design, development, and business background."}
               cta={"Download my cv"} 
-              link={"/page-2"} 
+              link={"https://ernesto-perez.com/cv_ernesto_perez.pdf"} 
               screen={phone} 
               class={"phone"} 
               pageactive={origin} 
@@ -63,7 +63,8 @@ const IndexPage = () => {
               subtitle={"Project"} 
               description={"A system-minded Senior Product Designer with visual design, development, and business background."} 
               cta={"See the project"} 
-              link={"/page-2"} 
+              message={"Comming soon"} 
+              link={"#"} 
               screen={laptop} 
               class={"laptop"} 
               pageactive={origin} 
@@ -73,7 +74,8 @@ const IndexPage = () => {
               subtitle={"Project"} 
               description={"A system-minded Senior Product Designer with visual design, development, and business background."} 
               cta={"See the project"} 
-              link={"/page-2"} 
+              message={"Comming soon"} 
+              link={"#"} 
               screen={laptop} 
               class={"laptop"} 
               pageactive={origin} 
@@ -83,7 +85,8 @@ const IndexPage = () => {
               subtitle={"Project"} 
               description={"A system-minded Senior Product Designer with visual design, development, and business background."} 
               cta={"See the project"} 
-              link={"/page-2"} 
+              message={"Comming soon"} 
+              link={"#"} 
               screen={phone} 
               class={"phone"} 
               pageactive={origin} 

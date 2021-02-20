@@ -169,6 +169,14 @@ h3 {
   line-height: 1.5;
 }
 
+h4 {
+  font-size: 15px;
+  font-weight: 300;
+  line-height: 1.5;
+  margin: 10px 0 0 20px;
+  color: #5a6d8a;
+}
+
 body {
   font-family: "Raleway", sans-serif;
   font-size: 16px;
@@ -243,6 +251,7 @@ align-items: flex-start;
   bottom: 50px;
   cursor: pointer;
   z-index: 100;
+  transition: 500ms;
 }
 
 .arrowUp{
@@ -251,7 +260,29 @@ align-items: flex-start;
   bottom: 100px;
   cursor: pointer;
   z-index: 100;
+  transition: 500ms;
 }
+
+.arrowUp:hover{
+  transition: 500ms;
+ transform: scale(1.5);
+}
+
+.arrowDown:hover{
+  transition: 500ms;
+ transform: scale(1.5);
+}
+
+.arrowUp:active{
+  transition: 500ms;
+ transform: scale(0.8);
+}
+
+.arrowDown:active{
+  transition: 500ms;
+ transform: scale(0.8);
+}
+
 
 .hide{
   display: none;
@@ -617,18 +648,18 @@ display: none;
 
   .phone {
     position: absolute;
-    right: 30%;
-    top: 50%;
+    right: 2%;
+    top: 63%;
     width: auto;
     height: 34%;
   }
 
   .laptop {
     position: absolute;
-    top: 54%;
+    top: 63%;
     width: auto;
     height: 23%;
-    right: 30px;
+    right: -20px;
   }
 
   .mainText {
@@ -637,6 +668,23 @@ display: none;
     text-align: left;
     margin-left: 10%;
     width: 50%;
+  }
+
+  .pageNumber {
+    position: absolute;
+    right: 121px;
+    bottom: 24px;
+    font-size: 2rem;
+    opacity: 0.2;
+    font-variant-numeric: lining-nums;
+  }
+
+  .arrowDown{
+    left: 30px;
+  }
+  
+  .arrowUp{
+    left: 30px;
   }
    
 }

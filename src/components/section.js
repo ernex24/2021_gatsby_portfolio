@@ -19,9 +19,10 @@ function MySection(props){
         <h2>{props.subtitle}</h2>
         <h1>{props.title}</h1>
         <h3>{props.description}</h3>
-        <Link to={props.link}>
+        <Link to={props.link} target="_blank">
         <button className="cta">{props.cta}</button>
         </Link>
+        <h4>{props.message}</h4>
       </div>
       <Bounce right when={show}>
       <img className={props.class} src={props.screen}></img>
