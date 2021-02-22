@@ -1,6 +1,7 @@
 import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
+import { motion, AnimatePresence } from "framer-motion"
 
 import logo from '../images/ernesto_perez_logo.svg';
 import linkedin from '../images/linkedin.svg';
@@ -13,7 +14,14 @@ const moveTo = (section) => {
 }
 
 const Header = (props) => (
+ 
   <header className="header">
+     <AnimatePresence>
+  <motion.div
+  exit={{ opacity: 0, y: -50 }}
+  initial={{ opacity: 0, y: -50 }}
+  animate={{ opacity: 1, y: 0 }}   
+>
     <div className="mainHeader">
     <div><a href="#home" onClick={() => moveTo(1)} ><img className="logo" src={logo}></img></a></div>
     <ul className="nav">
@@ -40,12 +48,23 @@ const Header = (props) => (
 
     </ul>
     </div>
+    </motion.div>
+  </AnimatePresence>
+  <AnimatePresence>
+  <motion.div
+  exit={{ opacity: 0, y: -50 }}
+  initial={{ opacity: 0, y: -50 }}
+  animate={{ opacity: 1, y: 0 }}   
+>
     <ul className="socialnav">
       <li><a href="https://www.linkedin.com/ernesto1984" target="_blank"><img src={linkedin}></img></a></li>
       <li><a href="https://dribbble.com/ernex1984" target="_blank"><img src={dribbble}></img></a></li>
       <li><a href="https://www.instagram.com/ernex_ux_ui" target="_blank"><img src={instagram}></img></a></li>
     </ul>
+    </motion.div>
+  </AnimatePresence>
   </header>
+  
 )
 
 export default Header

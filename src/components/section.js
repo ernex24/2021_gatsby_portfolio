@@ -2,6 +2,7 @@ import { Link } from "gatsby";
 import PropTypes from "prop-types";
 import React, { useState, useEffect } from "react";
 import Bounce from 'react-reveal/Bounce';
+import { motion, AnimatePresence } from "framer-motion"
 
 function MySection(props){
   const [show, setShow] = useState(false);
@@ -14,6 +15,7 @@ function MySection(props){
   });
   
   return (
+    
     <div className="section">
       <div className="mainText">
         <h2>{props.subtitle}</h2>

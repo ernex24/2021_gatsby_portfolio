@@ -399,15 +399,21 @@ align-items: flex-start;
 }
 
 .phone {
-  position: absolute;
-  right: 14%;
-  top: 15%;
+    position: absolute;
+    right: 14%;
+    top: 15%;
+    max-width: 306px;
+    box-shadow: 0 0px 30px rgb(0 0 0 / 60%);
+    border-radius: 30px;
 }
 
 .laptop {
   position: absolute;
   top: 25%;
   right: 4%;
+  max-height: 380px;
+  box-shadow: 0 0px 30px rgb(0 0 0 / 60%);
+  border-radius: 10px;
 }
 
 .tablet {

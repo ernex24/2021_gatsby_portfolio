@@ -11,6 +11,8 @@ import ReactFullpage from '@fullpage/react-fullpage';
 import '../../node_modules/pattern.css/dist/pattern.css';
 
 import phone from '../images/iPhone.png';
+import evscreen from '../images/ev-screen.svg';
+import designSystem from '../images/design-system.svg';
 import laptop from '../images/Macbook.png';
 import arrowDown from '../images/arrow_down.svg';
 import arrowUp from '../images/arrow_up.svg';
@@ -54,7 +56,7 @@ const IndexPage = () => {
               description={"A system-minded Senior Product Designer with visual design, development, and business background."}
               cta={"Download my cv"} 
               link={"https://ernesto-perez.com/cv_ernesto_perez.pdf"} 
-              screen={phone} 
+              screen={evscreen} 
               class={"phone"} 
               pageactive={origin} 
               pageloaded={destination}/>
@@ -65,7 +67,7 @@ const IndexPage = () => {
               cta={"See the project"} 
               message={"Comming soon"} 
               link={"#"} 
-              screen={laptop} 
+              screen={designSystem} 
               class={"laptop"} 
               pageactive={origin} 
               pageloaded={destination}/>
