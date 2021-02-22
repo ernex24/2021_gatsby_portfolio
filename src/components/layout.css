@@ -131,18 +131,26 @@ table {
   border-spacing: 0;
 }
 
+a { color:#ffffff} /* Globally */
+
+/* Each state */
+
+a:visited { text-decoration: none; color:#ffffff; font-weight: 300; transition: 300ms; }
+a:hover { text-decoration: none; color:#ffffff; font-weight: 700; transition: 300ms;  }
+a:focus { text-decoration: none; color:#ffffff; font-weight: 300; transition: 300ms;  }
+a:hover, a:active { text-decoration: none; color:#ffffff; font-weight: 300; transition: 300ms;  }
+
 a:link a:active,
 a:visited {
-  font-weight: 300;
-  color: #fff;
-  text-decoration: none;
-  transition: 2s;
+ 
 }
 
 a:hover {
   font-weight: 700;
   transition: 300ms;
 }
+
+a { color: inherit; } 
 
 @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap");
 
