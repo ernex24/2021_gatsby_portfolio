@@ -17,11 +17,11 @@ const Header = (props) => (
  
   <header className="header">
      <AnimatePresence>
-  <motion.div
-  exit={{ opacity: 0, y: -50 }}
-  initial={{ opacity: 0, y: -50 }}
-  animate={{ opacity: 1, y: 0 }}   
->
+     <motion.div
+      exit={{ opacity: 0, y: -50 }}
+      initial={{ opacity: 0, y: -50 }}
+      animate={{ opacity: 1, y: 0 }}   
+     >
     <div className="mainHeader">
     <div><a href="#home" onClick={() => moveTo(1)} ><img className="logo" src={logo}></img></a></div>
     <ul className="nav">

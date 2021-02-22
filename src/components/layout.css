@@ -349,12 +349,16 @@ align-items: flex-start;
   z-index: -1;
 }
 
-.niceBackground {
+.niceBackgroundContainer{
   position: absolute;
-  width: 60vw;
   top: 0;
   right: 0;
+  transition: all 1s;
+}
+
+.niceBackground {
   pointer-events: none;
+  transition: all 1s;
 }
 
 .mainText {
@@ -386,15 +390,18 @@ align-items: flex-start;
 .mainText h1 {
   margin-bottom: 24px;
 }
-
-.pageNumber {
+.pageNumberContainer{
   position: absolute;
-    right: 50px;
-    bottom: 24px;
+  right: 50px;
+  bottom: 24px;
+  z-index: 1;
+}
+.pageNumber {
+    
     font-size: 120px;
     opacity: 0.1;
     font-variant-numeric: lining-nums;
-    z-index: 1;
+
     font-weight: 600;
 }
 

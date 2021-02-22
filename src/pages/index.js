@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+
 import { Link } from "gatsby";
 
 import Layout from "../components/layout";
@@ -17,6 +18,8 @@ import laptop from '../images/Macbook.png';
 import arrowDown from '../images/arrow_down.svg';
 import arrowUp from '../images/arrow_up.svg';
 import niceBackground from '../images/niceBackground.svg';
+
+import { motion, AnimatePresence } from "framer-motion";
 
 const moveDown = () => {
   // console.log(window.fullpage_api)
@@ -66,7 +69,7 @@ const IndexPage = () => {
               description={"A system-minded Senior Product Designer with visual design, development, and business background."} 
               cta={"See the project"} 
               message={"Comming soon"} 
-              link={"#"} 
+              link={"/page-2"} 
               screen={designSystem} 
               class={"laptop"} 
               pageactive={origin} 
@@ -97,12 +100,45 @@ const IndexPage = () => {
         );
       }}
     />
-    <div>
+  
+    <div className="pageNumberContainer">
+  <AnimatePresence>
+    <motion.div
+           exit={{ opacity: 0, x: 50 }}
+           initial={{ opacity: 0, x: 50 }}
+           animate={{ opacity: 1, x: 0 }}      
+        >
       <div className="pageNumber">{'0'+(origin+1)}</div>
-      <img className="niceBackground" src={niceBackground}></img>
+      </motion.div>
+      </AnimatePresence>
+      </div>
+ 
+      <div className="niceBackgroundContainer">
+
+      <AnimatePresence>
+          <motion.div
+           exit={{ opacity: 0, x: 800 }}
+           initial={{ opacity: 0, x: 800 }}
+           animate={{ opacity: 1, x: 20 }}      
+        >
+          <img className="niceBackground" src={niceBackground}></img>
+          </motion.div>
+      </AnimatePresence>
+
+      </div>
+
+      <div className="arrowContainer">
+      <AnimatePresence>
+          <motion.div
+           exit={{ opacity: 0, x: -50 }}
+           initial={{ opacity: 0, x: -50 }}
+           animate={{ opacity: 1, x: 0 }}      
+        >
       <img onClick={() => moveDown()} className={ origin === 3 ? " hide" : " arrowDown"} src={arrowDown}></img>
       <img onClick={() => moveUp()} className={ origin === 0 ? " hide" : " arrowUp"  } src={arrowUp}></img>
-    </div>
+      </motion.div>
+      </AnimatePresence>
+      </div>
   </>
     )
   }
